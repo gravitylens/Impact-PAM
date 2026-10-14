@@ -1,0 +1,858 @@
+<h1 style="text-align: left;">Ignite World Tour: IT Infrastructure Lab</h1>
+
+<p>
+	<br>
+</p>
+
+<h1 id="introduction-to-skytap-bfc46647" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);"><span style="color: rgb(41, 105, 176);"><strong>Introduction to Kyndryl</strong></span></h1>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Before beginning the exercises, here are a few tips to help you navigate the labs more effectively. Understanding these will make for a much more enjoyable lab experience.</p>
+
+<h3 id="connecting-to-a-virtual-machine-d4ae6892" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Kyndryl Interface</h3>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Once connected to the Kyndryl environment, you will see the following screen. This interface displays a virtual machine on the left side and the lab guide on the right side.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzcxMCwicHVyIjoiYmxvYl9pZCJ9fQ==--efc6985eee863c03effd152c0f4502dd1eba023d/DirectUploadedFile" style="width: 1035px;" class="fr-fic fr-dib"></p>
+
+<h3 id="using-the-guide-on-small-screens-ae6625e1" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Using the Guide on Small Screens</h3>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">The lab manual typically appears as a panel on the right side of the virtual machine. This layout is more effective on larger screens, enabling side-by-side viewing of the lab and instructions. However, it may be challenging to navigate on smaller screens that lack sufficient space for all content. Several features are available to assist with this issue.</p>
+
+<h4 id="resize-the-guide-5e02db14" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Resize the Guide</h4>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">You can shrink the size of the right panel to allow more space for the virtual machine.</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);"><img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdnNIIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--331ce492450b433e3e6ac1a3d0c6497d2bce82f6/DirectUploadedFile" class="fr-fic fr-dib" style="vertical-align: top;text-align: left;width: 689px;"></p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">If the displayed images are too small, click on the image to view them in full-screen.</p>
+
+<h4 id="pop-out-the-guide-478a6e2e" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Pop out the Guide</h4>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">You can<strong>&nbsp;Pop out</strong> the guide to move it to a separate browser tab or on another monitor. This allows you to collapse the lab manual panel, maximizing screen space for the virtual machine.</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);"><img data-fr-image-pasted="true" alt="Skytap Popout" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbzRHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1dcceb8ebbf8e4e68fe8b59f872a32d248873f93/Skytap-Popout.png" class="fr-fic fr-dib" style="vertical-align: top;text-align: left;width: 200px;"></p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">
+	<br>
+</p>
+
+<h3 id="copy-and-paste-2966c431" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Copy and Paste</h3>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">It is possible to copy/paste between a virtual machine and your local machine. Kyndryl will attempt to do this whenever you use ctrl-c or ctrl-v in a virtual machine. However, this can be unreliable as it may have trouble syncing with your local clipboard. For better results, use the clipboard button on the Kyndryl Toolbar to transfer your endpoint clipboard to the virtual machine directly. Right-clicking to copy and paste will only work with the VM clipboard.</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);"><img data-fr-image-pasted="true" alt="Clipboard Button" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbWdHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bb57e93c8025e53b9ccd83380ddde2e34b0479ae/Skytap-Clipboard.png" class="fr-fic fr-dib" style="vertical-align: top;text-align: left;"></p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">There is also
+	<x-copy-text>copyable text</x-copy-text> throughout the guide. You can paste that value into the VM with a right-click or <strong>ctrl-v&nbsp;</strong>whenever you click on one of these copyable texts. Be patient, as it usually takes a second or two to work.</p>
+
+<h3 id="tips-for-maximum-productivity-e22c0d61" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Tips for Maximum Productivity</h3>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Use the Kyndryl Toolbar on the virtual machine to maximize your ability to interact with that machine efficiently.</p>
+
+<h4 id="fullscreen-58981392" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Fit to Window</h4>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">The Fit to Window icon will resize your virtual screen to adapt to your computer&#39;s screen settings to avoid scrolling. Putting your browser in full-screen mode also creates more screen space for the virtual machine and minimizes distractions.</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);"><img data-fr-image-pasted="true" alt="Fullscreen Button" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbWtHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6c672347a70e70b5de8d8be499a3d9d8c4f0e011/Skytap-Resize.png" class="fr-fic fr-dib" style="vertical-align: top;text-align: left;"></p>
+
+<h4 id="bandwidth-settings-a45f0e05" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Bandwidth Settings</h4>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">You may need to adjust your bandwidth settings for slower connections. This will reduce the image quality of the connection and conserve bandwidth.</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);"><img data-fr-image-pasted="true" alt="Bandwidth Button" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbjRHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6455a39e9e8b92c9f8c9b645e13e31745514c140/Skytap-Bandwidth.png" class="fr-fic fr-dib" style="vertical-align: top;text-align: left;"></p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Kyndryl recommends at least 1.2 Mbps bandwidth per VM console session running. Latency is usually the most significant cause of poor performance.</p>
+
+<h4 id="ctrl-alt-del-b9c130cd" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Ctrl-Alt-Del</h4>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Use the <strong>Ctrl-Alt-Del&nbsp;</strong>button on the toolbar to send a Ctrl-Alt-Del to the virtual machine.</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);"><img data-fr-image-pasted="true" alt="Ctrl-Alt-Del Button" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbWNHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a8663e3d4356678b17996156159db68412712e8a/Skytap-C-A-D.png" class="fr-fic fr-dib" style="vertical-align: top;text-align: left;"></p>
+
+<h4 id="using-vpns-23c8139d" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Using VPNs</h4>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Connecting to Kyndryl while using a VPN may introduce additional network latency. It can also mislead the GeoIP locator system in Kyndryl, potentially provisioning your lab in a suboptimal region, which could exacerbate latency issues. To enhance the responsiveness of virtual machines, avoid using VPN connections whenever possible.</p>
+
+<h3 id="global-users-6ac4872d" style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Global Users</h3>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">The lab machines are configured to use a US-English keyboard layout by default. If you use a machine with a different keyboard layout, you may experience odd behavior from your lab machines. The solution is to install the keyboard layout for your keyboard on your lab machines. Follow the process below to find and configure the correct keyboard layout for your keyboard.</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">On the VM, click on the <strong>Start Menu</strong>, go to <strong>Settings |</strong> <strong>Time &amp; Language |</strong> <strong>Language |</strong> <strong>Add a language</strong>.</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);"><img data-fr-image-pasted="true" alt="Windows Add Language" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbXNHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c2ca9efd4fd107ee532683534b6de329303b02db/Windows-Add-Language.png" class="fr-fic fr-dib" style="vertical-align: top;text-align: left;"></p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">Select your language. Click <strong>Next</strong>. Uncheck the options for voice and handwriting, and then click <strong>Install</strong>.</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);"><img data-fr-image-pasted="true" alt="Windows Select Language" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbXdHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0eed0957ff846d3991942a49ef536a811c90ea87/Windows-Select-Language.png" class="fr-fic fr-dib" style="vertical-align: top;text-align: left;"></p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">
+	<x-block class="alert alert-warning" style="color: var(--bs-alert-color);background-color: var(--bs-alert-bg);">Note: If you use an alternate keyboard layout (e.g., AZERTY, Dvorak), you can click the options next to your language to install that. Otherwise, close the Language window.</x-block>
+</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">In the system tray, click ENG, then choose your keyboard layout. You may switch back and forth between keyboard layouts.</p>
+
+<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);">
+	<br>
+</p>
+<hr data-page-break="" style="color: rgb(33, 37, 41);width: 2481px;text-align: start;background-color: rgb(255, 255, 255);">
+
+<h1><strong><span style="color: rgb(41, 105, 176);">Section 1: Secure Access to Cloud-native Services and Elastic Workloads</span></strong></h1>
+
+<p>
+	<br>
+</p>
+
+<p>In this section, you will perform the following actions:</p>
+
+<ul>
+	<li>Sign in to the Workstation VM</li>
+	<li>Connect to the AWS console, elevating your permissions just-in-time based on policies configured in Secure Cloud Access</li>
+	<li>Identify the instance ID for your Linux and Database targets</li>
+	<li>Connect to the Linux and Database instances using zero-standing privileges (ZSP)&nbsp;</li>
+	<li>Attempt to access targets that you are <strong>not</strong> allowed to access&nbsp;</li>
+</ul>
+<hr data-page-break="">
+
+<h2>1-1 Sign in to the Workstation VM</h2>
+
+<ol>
+	<li>Click on the VM named <strong>WIN10WORKSTATION&nbsp;</strong>to initiate the connection.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjI4NiwicHVyIjoiYmxvYl9pZCJ9fQ==--18d9cb37604c5ee2d3ee25ba9dd29edd0631e221/DirectUploadedFile" style="width: 751px;" class="fr-fic fr-dib"></li>
+	<li>Click on the <strong>Ctrl-Alt-Del&nbsp;</strong>button<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjI4OCwicHVyIjoiYmxvYl9pZCJ9fQ==--632b64777e95de2718af15dc8dfcb3893068ea45/DirectUploadedFile" style="width: 645px;" class="fr-fic fr-dib"></li>
+	<li>When prompted, type the password <strong>Cyberark1</strong> to sign in.<strong><img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc1FJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b3e13d304bbdea4f2d0e8487c3e9ddafae336b31/DirectUploadedFile" class="fr-fic fr-dib" style="vertical-align: top;color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);width: 300px;"><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzU3OCwicHVyIjoiYmxvYl9pZCJ9fQ==--6f7721a4173b15d114173c1f2187ebff3128ff1b/DirectUploadedFile" style="width: 624px;" class="fr-fic fr-dib"></strong></li>
+	<li>Click the <strong>Fit to Window&nbsp;</strong>icon to automatically adjust the virtual machine display so it matches your screen and eliminates the need to scroll.
+
+		<p style="color: rgb(33, 37, 41);text-align: start;background-color: rgb(255, 255, 255);"><img data-fr-image-pasted="true" alt="Fullscreen Button" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbWtHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6c672347a70e70b5de8d8be499a3d9d8c4f0e011/Skytap-Resize.png" class="fr-fic fr-dib" style="vertical-align: top;text-align: left;"></p>
+	</li>
+</ol>
+<hr data-page-break="">
+
+<h2>1-2 Connecting to cloud-native services</h2>
+
+<ol>
+	<li>Launch the <strong>Chrome</strong> Browser from the desktop on the Kyndryl workstation.
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>The Chrome browser already has the Cyberark Secure Web Sessions (SWS) extension installed and enabled for step recording. In this exercise, we will use Chrome to connect to the cloud console, enabling SWS to record our session.
+				<br>
+				<br>
+			</p>
+
+			<p>It&#39;s important to note that CyberArk Secure Cloud Access (SCA) provides users with native access to the cloud console with Zero-standing privileges (ZSP), regardless of the browser they use, without needing additional security controls from SWS. However, for optimal security when accessing the cloud console, it is recommended that additional security controls be applied with SWS.</p>
+		</x-block>
+
+		<p><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzU3OSwicHVyIjoiYmxvYl9pZCJ9fQ==--961f7d0bfb6734deab67c67e52184c02ee599126/DirectUploadedFile" style="width: 214px;" class="fr-fic fr-dib"><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU4MiwicHVyIjoiYmxvYl9pZCJ9fQ==--4962d2d10cc5c79428370b96204e65e97731ee45/DirectUploadedFile" style="width: 578px;" class="fr-fic fr-dib"></p>
+	</li>
+	<li>Sign in to the <strong><span style="color:#005DAC;">Identity</span></strong><span style="color:#005DAC;">&nbsp;</span><strong><span style="color:#005DAC;">Portal&nbsp;</span></strong>using the following credentials:&nbsp;
+
+		<table style="width: 100%;">
+			<tbody>
+				<tr>
+					<td style="width: 50.0000%;">Username</td>
+					<td style="width: 50.0000%;">
+						<x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:CPC_Username}</span></x-copy-text>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 50.0000%;">Password</td>
+					<td style="width: 50.0000%;">
+						<x-copy-text>Cyberark1</x-copy-text>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>Please be aware that we decided <strong>not&nbsp;</strong>to require multi factor authentication only to streamline the connection process for this lab. However, multi-factor authentication (<strong>MFA</strong>) should be set in production environments to mitigate the risks of unauthorized access.</p>
+		</x-block>
+	</li>
+	<li><strong>If prompted to update your password</strong>, set the new password to <strong>Cyberark2</strong>, as it will be necessary for the upcoming exercises, and then click <strong>Next</strong>. After this, log in again with your new password. <strong>If no password change is requested</strong>, keep the default one.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzU0OSwicHVyIjoiYmxvYl9pZCJ9fQ==--a8a3dbdb60df8afcc0c5c845a92551556e654abe/DirectUploadedFile" style="width: 394px;" class="fr-fic fr-dib"></li>
+	<li>If you receive a prompt to sign in to the Identity Browser Extension, click <strong data-end="87" data-start="76">Sign in</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU4NSwicHVyIjoiYmxvYl9pZCJ9fQ==--bc62359c692c22b6b6a6b08c5b0d6ed03e19af6f/DirectUploadedFile" style="width: 592px;" class="fr-fic fr-dib"></li>
+	<li>Verify you have successfully navigated to the <strong>Access</strong> space. You can close the Cora AI windows to gain a bit more space in the ui<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU4NiwicHVyIjoiYmxvYl9pZCJ9fQ==--a84ab78b16fabfb40d30aac7e89ad00a729534db/DirectUploadedFile" style="width: 922px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p style="text-align:justify;"><span style="text-align: start;">The &nbsp;</span><span class="mc-variable project_variables.secure-access-space variable" style="text-align: start;">Access space</span><span style="text-align: start;">&nbsp;enables you to manage and access your organization&#39;s cloud and infrastructure resources in a web-based environment. It integrates seamlessly with your&nbsp;</span><span class="mc-variable cc_C_CyberArk.CompanyName variable" style="text-align: start;">CyberArk</span><span style="text-align: start;">&nbsp;deployment, offering a more unified user experience. The&nbsp;</span><span class="mc-variable project_variables.secure-access-space variable" style="text-align: start;">Access space</span><span style="text-align: start;">&nbsp;enables you to access assets secured in the&nbsp;</span><span class="mc-variable cc_C_CyberArk.CompanyName variable" style="text-align: start;">CyberArk</span><span style="text-align: start;">&nbsp;</span><span class="mc-variable cc_product_vars.PCloud-full variable" style="text-align: start;">Privilege Cloud Vault</span><span style="text-align: start;">&nbsp;via the&nbsp;</span><span class="mc-variable cc_product_vars.SIA-full variable" style="text-align: start;">Secure Infrastructure Access</span><span style="text-align: start;">&nbsp;(</span><span class="mc-variable cc_product_vars.SIA-short variable" style="text-align: start;">SIA</span><span style="text-align: start;">) component. The space also enables you to view and copy credentials and it provides zero standing privileges access to your organizational infrastructure.</span></p>
+		</x-block>
+	</li>
+	<li>Feel free to close the Cora AI window if you need more room on your screen.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU4NywicHVyIjoiYmxvYl9pZCJ9fQ==--1f625fd1d79a5b25313c826d37b5269f5ff120cd/DirectUploadedFile" style="width: 300px;" class="fr-fic fr-dib">
+		<br>
+	</li>
+	<li>Click on the <strong>AWS IAM Identity Center&nbsp;</strong>tile.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU4OCwicHVyIjoiYmxvYl9pZCJ9fQ==--aee08276e1f4199c522cddc279b001719a2b87d1/DirectUploadedFile" style="width: 541px;" class="fr-fic fr-dib">&nbsp;</li>
+	<li>A new tab will open in the web browser. Take a moment to read the message displayed by CyberArk, which tells you which security controls have been put in place to secure this session, in this case Step . Then click <strong>Continue.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjI5MCwicHVyIjoiYmxvYl9pZCJ9fQ==--fc7191e6d284e815c56907a8e112ad297f75b55d/DirectUploadedFile" style="width: 1023px;" class="fr-fic fr-dib"></strong>
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p><strong>Note:</strong> If you see the following message, click on the <strong>AWS IAM Identity Center</strong> tile once more.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NTczNSwicHVyIjoiYmxvYl9pZCJ9fQ==--2f69081ace6eeec3aa55fa7f1bad68659c202253/DirectUploadedFile" style="width: 300px;" class="fr-fic fr-dib"></p>
+		</x-block>
+	</li>
+	<li>Ensure that you can see two AWS accounts, each associated with its own permission set (one permission set per account).<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzkxNiwicHVyIjoiYmxvYl9pZCJ9fQ==--d2ceb0b42ceb7e3707c4fb5ea9aeba833b828380/DirectUploadedFile" style="width: 1064px;" class="fr-fic fr-dib"></li>
+</ol>
+<hr data-page-break="">
+
+<h2>1-3 Connect directly to the Cloud Console</h2>
+
+<p>First, let&#39;s try connecting to the AWS cloud console directly, that is, without elevating permissions based on the policies configured in <strong>Secure Cloud Access (SCA)</strong>.&nbsp;</p>
+
+<ol>
+	<li>On the top right side, click <strong>Go directly to the cloud console</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzkxNywicHVyIjoiYmxvYl9pZCJ9fQ==--fa96229dd11418053133a04bbfa50440dfe7fa1c/DirectUploadedFile" style="width: 1062px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-danger" data-callout="" data-callout-warning="">
+
+			<p style="text-align: left;">The following message from AWS means that although you can log in to the AWS console, you do not have permission to access any applications or accounts. This highlights the fact your user has no standing access to resources in AWS.<span data-sd-animate="true">&nbsp;<strong>So even if</strong></span><strong>&nbsp;<span data-sd-animate="true">an</span> <span data-sd-animate="true">access</span> <span data-sd-animate="true">key</span> <span data-sd-animate="true">or</span> <span data-sd-animate="true">user</span> <span data-sd-animate="true">credentials</span> were <span data-sd-animate="true">exposed</span> <span data-sd-animate="true">in</span> <span data-sd-animate="true">a</span> <span data-sd-animate="true">public</span> <span data-sd-animate="true">repository,</span> <span data-sd-animate="true">an</span> <span data-sd-animate="true">attacker</span> <span data-sd-animate="true">might</span> <span data-sd-animate="true">be</span> <span data-sd-animate="true">able</span> <span data-sd-animate="true">to</span> <span data-sd-animate="true">connect</span> <span data-sd-animate="true">temporarily</span> <span data-sd-animate="true">but</span> <span data-sd-animate="true">would</span> <span data-sd-animate="true">not</span> <span data-sd-animate="true">retain</span> standing <span data-sd-animate="true">access</span> <span data-sd-animate="true">to</span> <span data-sd-animate="true">the</span>&nbsp;</strong><span data-sd-animate="true"><strong>account.</strong></span></p>
+		</x-block>
+	</li>
+	<li><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzkxNSwicHVyIjoiYmxvYl9pZCJ9fQ==--77812a021c5ef245644564900d846a044f0f2a8e/DirectUploadedFile" style="width: 920px;" class="fr-fic fr-dib">Close this tab to return to the<strong>&nbsp;</strong><strong>Access space</strong>.</li>
+</ol>
+<hr data-page-break="">
+
+<h2><span data-teams="true">1-4 Connect to the AWS console with Zero-standing Privileges (ZSP)</span></h2>
+
+<ol>
+	<li>Click on the <strong>AWS IAM Identity Center&nbsp;</strong>tile again
+		<br class="Apple-interchange-newline"><img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU4OCwicHVyIjoiYmxvYl9pZCJ9fQ==--aee08276e1f4199c522cddc279b001719a2b87d1/DirectUploadedFile" class="fr-fic fr-dib" style="vertical-align: top;color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);width: 541px;">
+		<br class="Apple-interchange-newline">
+	</li>
+	<li>Click <strong>Continue<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbkVJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e39da98746bdd75273b7a12099ed749d3bc77b6e/DirectUploadedFile" style="width: 450px;" class="fr-fic fr-dib"></strong></li>
+	<li>Hover the mouse over the<strong>&nbsp;DeveloperAccess&nbsp;</strong>under the <strong>opa-account-5Vi2PKn2YO-1&nbsp;</strong>account<strong>&nbsp;</strong>and then click on the <strong>Connect&nbsp;</strong>button.<strong>&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU5MCwicHVyIjoiYmxvYl9pZCJ9fQ==--082546a007ae8e9a8982be9dffe3df06b8700985/DirectUploadedFile" style="width: 1085px;" class="fr-fic fr-dib"></strong></li>
+	<li>Expand <strong>opa-account-5Vi2PKn2YO-1 &nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzkyMCwicHVyIjoiYmxvYl9pZCJ9fQ==--8b45df67d54ceceee3a17c7411860280e68af730/DirectUploadedFile" style="width: 939px;" class="fr-fic fr-dib"></strong>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>Note the difference between connecting to the cloud console using the permissions allowed by the SCA policy and connecting directly to the console previously.</p>
+		</x-block>
+	</li>
+	<li>Click on the <strong>DeveloperAccess&nbsp;</strong>Permission Set.<strong>&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzkyMSwicHVyIjoiYmxvYl9pZCJ9fQ==--5e4d02afd5f370013593361ce92a788bd62974e8/DirectUploadedFile" style="width: 983px;" class="fr-fic fr-dib"></strong>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>Note that here you also have the option of downloading the Access key and connecting to the account via CLI.</p>
+		</x-block>
+	</li>
+	<li>A new tab will open with some popups. You can either click <strong>Next</strong> or simply click in the background to close them before continuing. Note that the Permission set assigned to you <strong>DeveloperAccess</strong>, can also be seen next to your username on the top right of the window.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjI5NiwicHVyIjoiYmxvYl9pZCJ9fQ==--1c4352e7b480555ce02ecf4b64f9bbb15b8c773a/DirectUploadedFile" style="width: 927px;" class="fr-fic fr-dib"></li>
+	<li>Verify the <strong>AWS&nbsp;</strong>datacenter is set to <em><strong>United States (N. Virginia).&nbsp;</strong></em> If it&#39;s not, click on it and change it to <em><strong>United States (N. Virginia)<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjI5OCwicHVyIjoiYmxvYl9pZCJ9fQ==--1e8571bf0c0504661ad6f15a4302ab642ab69fa7/datacenter.gif" style="width: 732px;" class="fr-fic fr-dib"></strong></em>
+		<x-block class="alert alert-danger" data-callout="" data-callout-warning="">
+
+			<p>If the data center is configured to anything but for N. Virginia, no servers or databases will be available for the next steps.</p>
+		</x-block>
+	</li>
+	<li><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaFlJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ed11c731e1aca932f6b8da320fb160c0cb83432d/DirectUploadedFile" style="width: 1080px;" class="fr-fic fr-dib">In the <strong>Recently Visited&nbsp;</strong>widget, click on <strong>EC2<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBblVJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--51f2f15c099811301aa7e38e58266524cfba29c5/DirectUploadedFile" style="width: 1080px;" class="fr-fic fr-dib"></strong></li>
+	<li>In the left menu, click on <strong>Instances<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ0MCwicHVyIjoiYmxvYl9pZCJ9fQ==--90d201f78859d21be5c4d27bcb7cd04952e45863/DirectUploadedFile" style="width: 300px;" class="fr-fic fr-dib"></strong></li>
+	<li><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);"><strong>Click</strong> on the <x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:Target_Linux_Account}</span></x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">&nbsp;</span>target assigned for you in the access policy:&nbsp;<img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcWNKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d0f83672bd8bda2e9b19765b5f6cecdb22f51634/DirectUploadedFile" style="width: 1080px;" class="fr-fic fr-dib"></span>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p><strong>Note:</strong> If you can&#39;t see the full names of the EC2 instances, you can resize the column by dragging the separator bar.</p>
+		</x-block>
+	</li>
+	<li>Under the <strong>Details&nbsp;</strong>tab below, locate the <strong>Instance ID</strong> of your assigned target and click on the <strong>Copy&nbsp;</strong>icon.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcWtKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6b6789831fc397d430705406a3abb18aca4e85d0/DirectUploadedFile" style="width: 400px;" class="fr-fic fr-dib"></li>
+	<li>Move on to the next page, where we will use this Instance ID to connect to that AWS EC2 Linux instance.</li>
+</ol>
+<hr data-page-break="">
+
+<h2>1-5 Connect to a cloud-based Linux VM using ZSP</h2>
+
+<p>In this section, we will use the instance ID we copied from the AWS console to connect to a Linux VM hosted in the cloud, using zero-standing privileges (ZSP). CyberArk <strong>Secure Infrastructure Access (SIA)</strong> will manage the connection to the target system<strong>,&nbsp;</strong>ensuring isolation, monitoring, and recording of the session, which we will review in the final section of the lab.</p>
+
+<ol>
+	<li>Return to the <strong>Access space&nbsp;</strong>page.</li>
+	<li>Click <strong>Infrastructure&nbsp;</strong>and &nbsp;<strong>Add target&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU5MSwicHVyIjoiYmxvYl9pZCJ9fQ==--9b3293784c9c81fef767a5dea447b1b14df6f478/DirectUploadedFile" style="width: 749px;" class="fr-fic fr-dib"></strong></li>
+	<li>Select <strong>Linux&nbsp;</strong>and click on<strong>&nbsp;Continue<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU5MiwicHVyIjoiYmxvYl9pZCJ9fQ==--472414a09a4176c78cd12b90cbac0a18b0b73cf7/DirectUploadedFile" style="width: 407px;" class="fr-fic fr-dib"></strong></li>
+	<li>Paste <strong>your</strong> <strong>EC2</strong> <em><strong>Instance ID&nbsp;</strong></em>in the <strong>Address&nbsp;</strong>field and click on <strong>Add Target<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU5MywicHVyIjoiYmxvYl9pZCJ9fQ==--a78a189a1889a36e1a3ac59b8ac83d970ee21c17/DirectUploadedFile" style="width: 416px;" class="fr-fic fr-dib"></strong>
+		<x-block class="alert alert-danger" data-callout="" data-callout-warning="">
+
+			<p>Please use the mouse right-click menu to paste the value as Ctrl+V may not work.</p>
+		</x-block>
+	</li>
+	<li>Ensure that a new target has been added to the list.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU5NCwicHVyIjoiYmxvYl9pZCJ9fQ==--0ba3adc46db8a9ecb38edd9c76eeaf24a64d291b/DirectUploadedFile" style="width: 487px;" class="fr-fic fr-dib"></li>
+	<li>Hover over the new target and click on <strong>Copy command</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU5NSwicHVyIjoiYmxvYl9pZCJ9fQ==--e79bd392d0007927bc596231488db521b2605ca6/DirectUploadedFile" style="width: 935px;" class="fr-fic fr-dib"></li>
+	<li>In the taskbar, click on the <strong>Command Prompt&nbsp;</strong>icon.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ3NCwicHVyIjoiYmxvYl9pZCJ9fQ==--5c0b7ad6a97ec3581f3abb1b0deb437ea962fbc0/DirectUploadedFile" style="width: 428px;" class="fr-fic fr-dib"></li>
+	<li><strong>Right-click&nbsp;</strong>inside the prompt window to paste in the connection string and press <strong>Enter</strong>.<img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaWNJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--41effba05cb37f69f1afa4ab87a03bf5cf44f774/DirectUploadedFile" style="width: 1535px;" class="fr-fic fr-dib">
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>Running this command sends a connection request to CyberArk SIA to establish a secure connection to a Linux VM using ZSP. &nbsp;SIA authorizes the end user to use attribute-based access control policies, which define both the available platform resources and the level of privileges allowed to the end user. &nbsp;The SIA connector then redirects the SSH session to the target, without allowing any inbound connectivity into the customer&rsquo;s environment. &nbsp;For each authorized connection, SIA generates and signs an SSH certificate with the CA private key which is used to authenticate the end user to the target machine as an existing local user of the target machine. This SSH certificate is invalidated for further use within minutes so that no one else can use it. Every new authorized connection request, even by the same user to the same target, generates a new SSH certificate.</p>
+		</x-block>
+	</li>
+	<li>Type <strong>Yes&nbsp;</strong>when asked to continue connecting.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ3NiwicHVyIjoiYmxvYl9pZCJ9fQ==--bfb2698e3705e89d6a4234614a9a8edb0e98ab1f/DirectUploadedFile" style="width: 794px;" class="fr-fic fr-dib"></li>
+	<li>Type in <strong><x-copy-text>Cyberark2</x-copy-text></strong> when prompted for the password. <em style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">(<strong>Note</strong> that if you were not asked to reset your password at the start of the lab, use the default one Cyberark1)&nbsp;</em>Please note that if MFA was enabled, you would complete the MFA process at this point.&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaWdJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1010b9dc2e162281ae1f527c9fd7f6b31198a27d/DirectUploadedFile" style="width: 1080px;" class="fr-fic fr-dib"></li>
+	<li>Please continue executing the following commands to generate some audit content, which we will use later.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzcxNiwicHVyIjoiYmxvYl9pZCJ9fQ==--a8a10ccbd3ec2ef7970733e92dff10642d9fd760/DirectUploadedFile" style="width: 953px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>
+				<x-copy-text>whoami</x-copy-text>
+				<br>
+				<x-copy-text>pwd</x-copy-text>
+				<br>
+				<x-copy-text>mkdir %{metadata:User}</x-copy-text>
+			</p>
+		</x-block>
+	</li>
+	<li>Execute the command
+		<x-copy-text><strong>passwd</strong></x-copy-text>. This command allows you to change your own password. When prompted for the current password, simply press <strong>Enter</strong> without inputting anything. Notice your session will be terminated as expected. The Threat Detection and Response (TDR) system flags the passwd command pattern as suspicious and is configured to automatically end sessions when that activity is detected. A screenshot from the TDR rule created for the lab is also included below <strong>for reference</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzcxOCwicHVyIjoiYmxvYl9pZCJ9fQ==--289b2f15d910149af73d331bb79952884eac4171/DirectUploadedFile" style="width: 865px;" class="fr-fic fr-dib"><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzcxOSwicHVyIjoiYmxvYl9pZCJ9fQ==--62506be5501503d2c04e06a3f0581f50f848380a/DirectUploadedFile" style="width: 868px;" class="fr-fic fr-dib"></li>
+</ol>
+<hr data-page-break="">
+
+<h2>1-6 Attempt to connect to a Linux VM without a Policy</h2>
+
+<p>In this exercise, we will attempt to connect to a Linux VM for which the access policy does <strong>not</strong> permit user access.</p>
+
+<ol>
+	<li>Return to the <strong>AWS EC2 Instances</strong> tab and then select the <strong>other</strong> Target Linux Account. If you previously connected to Target Linux Account 1-1, select Target Linux Account 1-2. Conversely, if you connected to Target Linux Account 1-2 earlier, select Target Linux Account 1-1.</li>
+	<li>&nbsp;Copy the <strong>Instance ID</strong> of the other Target Linux Account.</li>
+	<li><img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcWNKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d0f83672bd8bda2e9b19765b5f6cecdb22f51634/DirectUploadedFile" class="fr-fic fr-dib" style="vertical-align: top;color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);width: 1080px;">Return to the <strong>Access space</strong>, click <strong>Infrastructure&nbsp;</strong>| <strong>Add Target</strong>.</li>
+	<li>Select <strong>Linux,&nbsp;</strong>click on <strong>Continue</strong> and paste the <em>Instance ID&nbsp;</em>in the <strong>Address&nbsp;</strong>field.</li>
+	<li>Click <strong>Add target</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU5NiwicHVyIjoiYmxvYl9pZCJ9fQ==--23d77bc6b5641bba52fb2c94b24dfd8fa28e79f9/DirectUploadedFile" style="width: 463px;" class="fr-fic fr-dib"></li>
+	<li>On the new onboarded target, click <strong>Copy command</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU5NywicHVyIjoiYmxvYl9pZCJ9fQ==--1710bc8013b1b2f2c6164ed74c45906d3e2a3af8/DirectUploadedFile" style="width: 760px;" class="fr-fic fr-dib"></li>
+	<li>Return to the <strong>Command Prompt&nbsp;</strong>we opened earlier, or open a new one if you closed the previous one, and paste the connection string by right-clicking.</li>
+	<li>Enter <strong>Cyberark2</strong> as the password and press <strong>Enter</strong>. <em>(Note that if you were not asked to reset your password at the start of the lab, use the default one Cyberark1)</em></li>
+	<li>Even though your credentials are correct, access to the Linux virtual machine is denied because there is no policy that grants the user permission to access this system:&nbsp;<img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaThJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f894647b8c3dfa5437c79f21667d0aeddc9ae448/DirectUploadedFile" class="fr-fic fr-dib" style="vertical-align: top;color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);width: 1080px;"></li>
+	<li>Close the Command Prompt and proceed to the next exercise.</li>
+</ol>
+<hr data-page-break="">
+
+<h2>1-7 Connecting to a Database using ZSP</h2>
+
+<p>In this exercise, we will connect to a PostgreSQL database using zero-standing privileges (ZSP).</p>
+
+<ol>
+	<li>In the AWS <strong>Home | EC2 | us-east-1</strong> tab type in
+		<x-copy-text>rds</x-copy-text> in the search bar at the top and select <strong>Aurora and RDS</strong>.<strong><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdDhJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b24b53d5d45a6a3f5eb7d2b92ce0cd0b945559d3/DirectUploadedFile" style="width: 1080px;" class="fr-fic fr-dib"></strong></li>
+	<li>On the left side, click on <strong>Databases</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBajBJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff276e7afa73f77879740859a0aac6f674591f0a/DirectUploadedFile" style="width: 1080px;" class="fr-fic fr-dib"></li>
+	<li>You should see two databases on this page. If not, make sure the data center is set to<strong>&nbsp;United States (N. Virginia)</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcXNKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fb1534ce94928ea992a6a6ea59df9826cce4b101/DirectUploadedFile" style="width: 1080px;" class="fr-fic fr-dib"></li>
+	<li>Click on the <strong>DB Identifier</strong> assigned to you in the access policy:
+		<x-copy-text>%{metadata:Target_Database_Account}</x-copy-text>
+	</li>
+	<li>Under the <strong>Connectivity &amp; Security</strong> tab, select <strong>Endpoints</strong>&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzU2MSwicHVyIjoiYmxvYl9pZCJ9fQ==--3fd2bc3cb5c31a9c51149587cc5dbd4ab43651b8/DirectUploadedFile" style="width: 844px;" class="fr-fic fr-dib"></li>
+	<li>Click the <strong>Copy</strong> button located to the left of the <strong>Endpoint</strong> ID.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcTBKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--13fa28f8dc077fe1c213c4c5cabf8186a7ada889/DirectUploadedFile" style="width: 300px;" class="fr-fic fr-dib"></li>
+	<li>Return to the <strong>Access&nbsp;</strong>space.</li>
+	<li>Click <strong>Infrastructure</strong>, then <strong>Add Target</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU5OCwicHVyIjoiYmxvYl9pZCJ9fQ==--60f94c740bcc985a66ae634c8f2cf960e84f84ee/DirectUploadedFile" style="width: 1004px;" class="fr-fic fr-dib"></li>
+	<li>Select <strong>Database&nbsp;</strong>and click on <strong>Continue</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU5OSwicHVyIjoiYmxvYl9pZCJ9fQ==--406e73c701a70ffdb9d3542e31c8e4c65aacc968/DirectUploadedFile" style="width: 437px;" class="fr-fic fr-dib"></li>
+	<li>Select <strong>PostgreSQL</strong> as the Database type.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYwMCwicHVyIjoiYmxvYl9pZCJ9fQ==--74d813e3fcd9b42679ca4279f6fc47072e42238b/DirectUploadedFile" style="width: 445px;" class="fr-fic fr-dib"></li>
+	<li><strong>Paste</strong> the database endpoint address copied in the previous step by using the mouse right-click menu.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYwMSwicHVyIjoiYmxvYl9pZCJ9fQ==--8473ecee5370f47bd885423b45a51a66d243b1f8/DirectUploadedFile" style="width: 413px;" class="fr-fic fr-dib"></li>
+	<li>Scroll down to the <strong>How to connect</strong> section and select <strong>Generate a new password token</strong> as the authentication token. Then click on <strong>Add Target</strong><img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ3OSwicHVyIjoiYmxvYl9pZCJ9fQ==--2b114d0e32325f650b7f812331572014092ce3cf/DirectUploadedFile" style="width: 494px;" class="fr-fic fr-dib">
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p><span style="color: rgb(0, 0, 0);text-align: start;">The MFA caching feature enables connection to multiple target databases while performing the MFA authentication flow only once (in a configurable period of time).</span></p>
+		</x-block>
+	</li>
+	<li>Verify you can see a new target in the list. Hover over it with the mouse, then click <strong>Open connection guide</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYwMiwicHVyIjoiYmxvYl9pZCJ9fQ==--1fcf6f697967c9e06678d421d385620beb7bc2f0/DirectUploadedFile" style="width: 881px;" class="fr-fic fr-dib"></li>
+	<li>Click on the <strong>Get connection details<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbzRVIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e45777c874fd7823cedb52336ee3eb6487dbf57d/DirectUploadedFile" style="width: 641px;" class="fr-fic fr-dib"></strong></li>
+	<li>Expand the <strong>Connect using a command line tool</strong> section and click the <strong>Copy</strong> button to copy the psql connection string.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzcyNCwicHVyIjoiYmxvYl9pZCJ9fQ==--d32ae58e8895777e3fc469a68e84b4c76ea7cba6/DirectUploadedFile" style="width: 507px;" class="fr-fic fr-dib"></li>
+	<li>Open a <strong>Command Prompt&nbsp;</strong>window from the taskbar, paste the string via a right-click and press <strong>Enter</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa2NJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--80cca71492ac68dd7b7ca4be4b6a2f69f3e9be75/DirectUploadedFile" style="width: 1080px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>Running this command sends a connection request to CyberArk SIA to establish a secure connection to a PostgreSQL database using ZSP. &nbsp;SIA authorizes the end user to use attribute-based access control policies, which define both the available platform resources and the level of privileges allowed to the end user. <span style="text-align: left;">For each authorized connection, SIA creates a local database user, joins this user to database roles that were defined in the chosen policy, and deletes it when it is no longer needed. This is done using a pre-supplied local strong user with the appropriate permissions</span>.</p>
+		</x-block>
+	</li>
+	<li>When prompted for a password, return to the <strong>Access space</strong>, and copy the <strong>Authentication Token</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcEFVIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b7c2391fb5971bde344a32d5a494e375fbf39c98/DirectUploadedFile" style="width: 484px;" class="fr-fic fr-dib"></li>
+	<li>Paste the token in the <strong>Command Prompt&nbsp;</strong>via a right-click and press <strong>Enter</strong>. The result should indicate a successful connection, as shown below.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Njc1NywicHVyIjoiYmxvYl9pZCJ9fQ==--c86b20cf45ea43b5f4d94db9a8df28eecf5f40eb/DirectUploadedFile" style="width: 753px;" class="fr-fic fr-dib"></li>
+	<li>Confirm the ID of the generated <strong>ephemeral</strong> user using the following command. This user is assigned the cook role, which provides access to the food database.
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>
+				<x-copy-text>select current_user;</x-copy-text>
+			</p>
+		</x-block><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Njc1OCwicHVyIjoiYmxvYl9pZCJ9fQ==--daacf8a9c3a5a63dabd74a52b891783fdb8af63a/DirectUploadedFile" style="width: 835px;" class="fr-fic fr-dib"></li>
+	<li>Type in the command below to list the available databases. The <strong>food</strong> database should appear at the list.
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>
+				<x-copy-text>\list</x-copy-text>
+			</p>
+		</x-block>
+	</li>
+	<li><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Njc1OSwicHVyIjoiYmxvYl9pZCJ9fQ==--07d62730b17916e51699fd00dae452d4deacecd2/DirectUploadedFile" style="width: 756px;" class="fr-fic fr-dib">Connect to the database via the following command
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>
+				<x-copy-text>\c food</x-copy-text>
+			</p>
+		</x-block>
+	</li>
+	<li><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Njc2MCwicHVyIjoiYmxvYl9pZCJ9fQ==--c83ff2ca5aededb2e90d43f3d3f98a91ef66d6be/DirectUploadedFile" style="width: 786px;" class="fr-fic fr-dib">Once connected, display the tables using the following command. You should see a table named <strong>favorite_food.</strong>
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>
+				<x-copy-text>\dt</x-copy-text>
+			</p>
+		</x-block>
+	</li>
+	<li><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Njc2MSwicHVyIjoiYmxvYl9pZCJ9fQ==--ecd57241bdc965beb357df8ab8a1d1deb93c5e5e/DirectUploadedFile" style="width: 754px;" class="fr-fic fr-dib">Next, enter your favorite food in the table using the following command.
+		<br>
+		<x-block class="alert alert-danger" data-callout="" data-callout-warning="">
+
+			<p>Please do not enter the command as it is. Replace only the two parameters within the apostrophe as follows: <em><strong>YourFirstName&nbsp;</strong></em>represents your first name, for example <em>Chris</em><em>&nbsp;</em>and<em>&nbsp;</em><strong>FavoriteFood&nbsp;</strong> represents your favorite food, for example <em>Pizza</em>. Note that if you have difficulties with the command you can skip it and move to the next step.</p>
+		</x-block>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>
+				<x-copy-text>INSERT INTO favorite_food VALUES (%{metadata:UserID},&#39;YourFirstName&#39;,&#39;FavoriteFood&#39;);</x-copy-text>
+			</p>
+		</x-block>
+	</li>
+	<li><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Njc2MiwicHVyIjoiYmxvYl9pZCJ9fQ==--57e2110183526caf3d92f30d96169757f0b0e724/DirectUploadedFile" style="width: 451px;" class="fr-fic fr-dib">Check the table entries by running the following command. You should see your user ID along with your first name and favorite food if you typed the command successfully:
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>
+				<x-copy-text>SELECT * FROM favorite_food;</x-copy-text>
+			</p>
+		</x-block>
+	</li>
+	<li><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Njc2MywicHVyIjoiYmxvYl9pZCJ9fQ==--ae1a3ef4ce25fe051ae571bd4cd734c824f80113/DirectUploadedFile" style="width: 418px;" class="fr-fic fr-dib">With that done, we can close our connection to the database with the following command:
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>
+				<x-copy-text>\q</x-copy-text>
+			</p>
+		</x-block>
+	</li>
+	<li><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzU2NCwicHVyIjoiYmxvYl9pZCJ9fQ==--f705301b46e8dc798efc464cfd61541cf3291c5e/DirectUploadedFile" style="width: 370px;" class="fr-fic fr-dib">You can close the Command Prompt.</li>
+</ol>
+<hr data-page-break="">
+
+<h1><span style="color: rgb(41, 105, 176);"><strong>Section 2: Secure Access to Long-lived Windows Systems using Zero-standing Privileges (ZSP)</strong></span></h1>
+
+<p>
+	<br>
+</p>
+
+<p>In this section, you will connect to a Windows target using ZSP.</p>
+<hr data-page-break="">
+
+<h2>2-1 Connect to a Windows VM using ZSP</h2>
+
+<p><span style="color: rgb(0, 0, 0);">In this exercise, we will connect to a Windows VM using zero-standing privileges.</span></p>
+
+<p><span style="color: rgb(0, 0, 0);"><span class="mc-variable cc_product_vars.SIA-short variable" style="text-align: left;">SIA</span><span style="text-align: left;">&nbsp;for zero standing privileges access works differently for each target type. For a Windows target, <span class="mc-variable cc_product_vars.SIA-short variable" style="text-align: left;">SIA</span><span style="text-align: left;"> creates an ephemeral user and adds it to a local group on the target. Then, the </span><span class="mc-variable cc_product_vars.SIA-short variable" style="text-align: left;">SIA</span><span style="text-align: left;"> connector redirects the RDP session to the target, without allowing any inbound connectivity into the customer&rsquo;s environment. This method <span style="text-align: left;background-color: rgb(255, 255, 255);">enables the user to work on the target with a domain or local user that has the appropriate permissions.</span></span></span></span></p>
+
+<p>The ACME administrator already created a policy to grant you access via <strong>ZSP</strong>.</p>
+
+<ol>
+	<li>Return to the <strong>Access&nbsp;</strong>space, navigate to <strong>Infrastructure&nbsp;</strong>and click on <strong>Add target</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYwMywicHVyIjoiYmxvYl9pZCJ9fQ==--10db6b68fa955d7702c55efb333a8622cc84c262/DirectUploadedFile" style="width: 891px;" class="fr-fic fr-dib"></li>
+	<li>Select <strong>Windows</strong> and click on <strong>Continue</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYwNCwicHVyIjoiYmxvYl9pZCJ9fQ==--71fefbc40598a48fc994e15eca898945ff84f395/DirectUploadedFile" style="width: 383px;" class="fr-fic fr-dib"></li>
+	<li>Enter the following address<span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">:&nbsp;</span>
+		<x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);"><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:PPA_Address}</span></span></x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">&nbsp;</span> and click on <strong>Add Target<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYwNSwicHVyIjoiYmxvYl9pZCJ9fQ==--a260bb962bd8d970d9570cacafe8264eee9d64d9/DirectUploadedFile" style="width: 373px;" class="fr-fic fr-dib"></strong></li>
+	<li>Note the target has been added, but the username field is empty.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYwNiwicHVyIjoiYmxvYl9pZCJ9fQ==--8eb64c337d3ada96edff6983401ef4db954f806d/DirectUploadedFile" style="width: 694px;" class="fr-fic fr-dib"></li>
+	<li>Hover over the target and then click on the <strong>Connect&nbsp;</strong>button.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYwNywicHVyIjoiYmxvYl9pZCJ9fQ==--d3c83b4c77ccfb0937eccc0af285b27def7cd6c3/DirectUploadedFile" style="width: 845px;" class="fr-fic fr-dib"></li>
+	<li>Click on the RDP file to launch the session. If prompted about the publisher, select &quot;Don&#39;t ask me again for connections to this computer&quot; and click <strong>Connect</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzU2OSwicHVyIjoiYmxvYl9pZCJ9fQ==--c5bf66a40189dd002b511bc9e001b95e725f939f/DirectUploadedFile" style="width: 511px;" class="fr-fic fr-dib"><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ4NCwicHVyIjoiYmxvYl9pZCJ9fQ==--e95bcaa9fcc3642aed3980b3140aa0ee86de4e79/DirectUploadedFile" style="width: 540px;" class="fr-fic fr-dib"></li>
+	<li>On the target machine, click the Windows search icon in the taskbar, type <strong><x-copy-text><strong>lusrmgr.msc</strong></x-copy-text>&nbsp;</strong> and press <strong>Enter</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ4NiwicHVyIjoiYmxvYl9pZCJ9fQ==--982a8c268eee5af00c1707605816ee5bb5778e50/DirectUploadedFile" style="width: 300px;" class="fr-fic fr-dib"></li>
+	<li>Under the <strong>Local Users and Groups</strong> -&gt; <strong>Groups</strong> open the <strong>Remote Desktop Users&nbsp;</strong>group<strong>.</strong></li>
+	<li>Verify you can see your ephemeral user ID identified by the user&#39;s name followed by a random string.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcXNJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f7259600174406257c7a17e6c2497f27e1a0d15b/DirectUploadedFile" style="width: 540px;" class="fr-fic fr-dib">
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>When you connect to a Windows VM using ZSP, CyberArk creates an ephemeral account in the target system and adds it to a local group, in this case, Remote Desktop Users. This method ensures no permissions are associated with the credentials you used to access the target system until they are needed, and they are removed again at the end of the session. This approach minimizes the security risks associated with standing access.</p>
+		</x-block>
+	</li>
+	<li>Close the lusrmgr windows and Sign out of the RDP session.&nbsp;<img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc2NJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6a0ab2aa784d190fcc637030dc36a4f6de0b89ff/DirectUploadedFile" class="fr-fic fr-dib" style="vertical-align: top;color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);width: 540px;"></li>
+</ol>
+<hr data-page-break="">
+
+<h1><strong><span style="color: rgb(41, 105, 176);">Section 3: Secure Standing Access to Long-lived Windows Systems</span></strong></h1>
+
+<p>
+	<br>
+</p>
+
+<p>In this section, you will perform the following exercises:</p>
+
+<ul>
+	<li>Onboard a personal privileged account to the Vault.</li>
+	<li>Connect to a Windows target from the Privilege Cloud portal.</li>
+	<li>Connect to a Windows target from the new Access space.</li>
+	<li>Connect to a Windows target using Vaulted credentials with just-in-time elevation.</li>
+</ul>
+<hr data-page-break="">
+
+<h2>3-1 Onboard a Personal Privileged Account</h2>
+
+<p>In this exercise, you will add your personal privileged account (PPA) to the Vault using <strong>Privilege Cloud</strong>. A PPA is an account created for individual use and stored in a private, dedicated Safe. A personal account is quicker to create and more straightforward to manage than a regular account. This capability frees Privilege Cloud administrators from performing preliminary tasks for newly provisioned end users creating new accounts.</p>
+
+<p>We will then use the PPA account to connect to a long-lived Windows target via <strong>CyberArk Secure Infrastructure Access (SIA)</strong>.</p>
+
+<ol>
+	<li>Click the <strong>Waffle</strong> button and then select <strong>Privilege Cloud.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYxMSwicHVyIjoiYmxvYl9pZCJ9fQ==--3593680717886963284e1517f0709773c719ae45/DirectUploadedFile" style="width: 647px;" class="fr-fic fr-dib"></strong></li>
+	<li>In the <strong>Accounts view</strong> page, select <strong>Add personal privileged account</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYxMiwicHVyIjoiYmxvYl9pZCJ9fQ==--9dcb3e994a735f1e428691d41b88d34d9b2c6417/DirectUploadedFile" style="width: 861px;" class="fr-fic fr-dib"></li>
+	<li>Set the account properties as detailed in the table below and click on <strong>Add</strong>.
+
+		<table style="width: 100%;">
+			<tbody>
+				<tr>
+					<td style="width: 50.0000%;">Address</td>
+					<td style="width: 50.0000%;">
+						<x-copy-text>acme.corp</x-copy-text>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 50.0000%;">Username</td>
+					<td style="width: 50.0000%;">
+						<x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:PPA_Username}</span></x-copy-text>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 50.0000%;">Password</td>
+					<td style="width: 50.0000%;">
+						<x-copy-text>Cyberark1</x-copy-text>
+					</td>
+				</tr>
+			</tbody>
+		</table><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ4OCwicHVyIjoiYmxvYl9pZCJ9fQ==--70a9c5e487d59be71814b4efe4b5259b4a32d112/DirectUploadedFile" style="width: 457px;" class="fr-fic fr-dib"></li>
+	<li>Ensure that your account is listed on the <strong>Accounts View&nbsp;</strong>page.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzczMywicHVyIjoiYmxvYl9pZCJ9fQ==--200551ae361e911fb76633e4c60b65a25559c0a6/DirectUploadedFile" style="width: 982px;" class="fr-fic fr-dib"></li>
+</ol>
+<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+	<p><span style="background-color: var(--bs-alert-bg);color: var(--bs-alert-color);">A personal privileged account</span> is scheduled for automatic Verification when added to the Vault. After the account is successfully verified, additional actions such as <strong>Change&nbsp;</strong>and <strong>Reconcile&nbsp;</strong>password will also be available. This ensures that only the end user who owns the account and, therefore, knows the password can successfully onboard and manage the account.&nbsp;</p>
+</x-block>
+
+<p>The <strong>Verify</strong> task can take a few minutes, so for the sake of efficiency, we will not wait for the Verify action to complete or initiate a <strong>Change&nbsp;</strong>task, which would be required in the real world. Instead, we will proceed right away to the next section and connect with the account.</p>
+<hr data-page-break="">
+
+<h2>3-2 Connect to a Windows VM from the Privilege Cloud portal</h2>
+
+<p>First, we will connect to a Windows VM using the account we just onboarded. We will initiate the connection from the <strong>Privilege Cloud</strong> portal, but <strong>CyberArk Secure Infrastructure Access (</strong><strong>SIA)</strong> will manage the session. When a user makes a request to access a<span style="text-align: left;">&nbsp;target using vaulted credentials,&nbsp;</span><span class="mc-variable cc_product_vars.SIA-short variable" style="text-align: left;">SIA</span><span style="text-align: left;">&nbsp;will provide access based on the existing access control policies with the user&rsquo;s permissions in Safes in&nbsp;</span><span class="mc-variable project_variables.CompanyName variable" style="text-align: left;">CyberArk</span><span style="text-align: left;">&nbsp;</span><span class="mc-variable cc_product_vars.PAM-short variable" style="text-align: left;">PAM</span><span style="text-align: left;">, where the vaulted credential is stored. Then, the <span class="mc-variable cc_product_vars.SIA-short variable" style="text-align: left;">SIA</span><span style="text-align: left;"> connector redirects the session to the target, without allowing any inbound connectivity into the customer&rsquo;s environment.</span></span></p>
+
+<p>Note that the option of launching a secure session from the Privilege Cloud portal using <strong>SIA&nbsp;</strong>is available only for Windows targets, and only when using Vaulted credentials. In later sections, we will see how to use <strong>SIA&nbsp;</strong>when connecting to Windows and other infrastructure targets using the <strong>Access space</strong>.</p>
+<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+	<p>Please note the admin needs to perform a few steps to enable the option of launching a connection via <strong>SIA&nbsp;</strong>from the <strong>Privilege Cloud&nbsp;</strong>portal<strong>.&nbsp;</strong>These steps are explained <a href="https://docs.cyberark.com/privilege-cloud-shared-services/latest/en/content/privilege%20cloud/privcloud-dpa-configure-pvwa-access.htm#ConfigureSIAconnectioninPrivilegeCloudPSMexists" rel="noopener noreferrer" target="_blank">here</a>.</p>
+</x-block>
+
+<ol>
+	<li>While still in <strong>Privilege Cloud</strong>, click the <strong>Connect&nbsp;</strong>button for
+		<x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:PPA_Username}</span></x-copy-text>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzczNCwicHVyIjoiYmxvYl9pZCJ9fQ==--709921c902e1273c8b8de70e4e35146dbe115edd/DirectUploadedFile" style="width: 901px;" class="fr-fic fr-dib"></li>
+	<li>Fill in the <strong>Remote Machine&nbsp;</strong>field with the target address:
+		<x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:PPA_Address}</span></x-copy-text>
+		<br><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);"><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ5MSwicHVyIjoiYmxvYl9pZCJ9fQ==--dc6df0d773e27d4669865551f5612fcc5c816412/DirectUploadedFile" style="width: 338px;" class="fr-fic fr-dib"></span>
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>Note that the <strong>SIA VPN-less slider</strong> allows users to determine whether to use <strong>SIA&nbsp;</strong>or <strong>PSM</strong>. In this lab PSM has not been deployed.</p>
+		</x-block>
+	</li>
+	<li>Click <strong>Connect&nbsp;</strong>and open the RDP file to launch a secure native session to the Windows target.
+		<br>
+		<x-block class="alert alert-danger" data-callout="" data-callout-warning="">
+
+			<p>For security reasons, the <strong>RDP&nbsp;</strong>file downloaded contains a one-time secure token which expires after 60 seconds.</p>
+		</x-block>
+	</li>
+	<li>Verify you where connected and then sign out from the <strong>RDP&nbsp;</strong>session.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdE1JIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--14835460bea0ed8e373fbd8b1a5c9dde35d9126a/DirectUploadedFile" style="width: 1080px;" class="fr-fic fr-dib"></li>
+</ol>
+<hr data-page-break="">
+
+<h2>3-3 Connect to a Windows VM from the Access space</h2>
+
+<ol>
+	<li>Click the <strong>Waffle</strong> button and then select<strong>&nbsp;Access</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYxMywicHVyIjoiYmxvYl9pZCJ9fQ==--a0154b7ece80402d5eb56ddc759f206949440957/DirectUploadedFile" style="width: 595px;" class="fr-fic fr-dib"></li>
+	<li><span style="color:black;">Click <strong>Infrastructure and n</strong><span style="color:black;">otice the privileged account we on boarded earlier is already listed. If the account is not listed, please <strong>refresh</strong> the page.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYxNSwicHVyIjoiYmxvYl9pZCJ9fQ==--842a2388eadeec0f527f4bbfc2c94fd5e6b37f3b/DirectUploadedFile" style="width: 789px;" class="fr-fic fr-dib"></span></span></li>
+	<li>Hover over the account and click the <strong>Add Windows target</strong> button to define the target.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYxNywicHVyIjoiYmxvYl9pZCJ9fQ==--fb18075465108fb5b8d547fb57445d12b1071ccd/DirectUploadedFile" style="width: 833px;" class="fr-fic fr-dib"></li>
+	<li>Fill in the target address<span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">: &nbsp;</span>
+		<x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);"><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:PPA_Address}</span></span></x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">&nbsp;</span></li>
+	<li>Verify the <strong>Connect using Just-in-time elevation</strong> is unchecked, then click <strong>Add and Connect</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ5MiwicHVyIjoiYmxvYl9pZCJ9fQ==--39674e2e5db79ad6e23765ed7a8e7b309e6ef962/DirectUploadedFile" style="width: 499px;" class="fr-fic fr-dib"></li>
+	<li>Click on the <strong>RDP file</strong> to open the session. Once connected, double-click on the <strong>Local Users and Groups&nbsp;</strong>icon, then navigate to <strong>Groups&nbsp;</strong>and<strong>&nbsp;Remote Desktop Users</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjkzNSwicHVyIjoiYmxvYl9pZCJ9fQ==--3e8fbe6bdef0a3ee9eec413e86a8bc7cffffa975/DirectUploadedFile" style="width: 505px;" class="fr-fic fr-dib"></li>
+	<li>Verify you can see the group <strong>ACME\WindowsAdmins</strong>.
+		<br><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc3dJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d0a0947a66672ec2b202495048b7ca9ea60f34f4/DirectUploadedFile" style="width: 800px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>The domain account we used to connect to the target is a member of the <strong>WindowsAdmins</strong> group. This means our privileged account has standing access to the target system. Although we mitigate the risk of standing access by managing the credentials in the CyberArk PAM Vault, there is always a risk associated with standing access. As seen in previous sections, this risk can be reduced by removing standing access and implementing a zero-standing privileges (ZSP) model.</p>
+		</x-block>
+	</li>
+	<li>Close the windows and Sign out of the session.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc2NJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6a0ab2aa784d190fcc637030dc36a4f6de0b89ff/DirectUploadedFile" style="width: 540px;" class="fr-fic fr-dib"></li>
+</ol>
+
+<p>
+	<br>
+</p>
+<hr data-page-break="">
+
+<h2>3-4 Connect to Windows using Vaulted credentials with Just-in-time Elevation</h2>
+
+<p><span style="color: rgb(0, 0, 0);text-align: start;">When using this feature, users connect to targets with credentials that are managed in the&nbsp;</span><span class="mc-variable cc_product_vars.PCloud-full variable" style="color: rgb(0, 0, 0);text-align: start;">Privilege Cloud</span><span style="color: rgb(0, 0, 0);text-align: start;">&nbsp;Vault with little or no associated permissions. Upon connecting to a target system, users receive only a selected range of relevant permissions defined in the appropriate policy. At the end of the user&rsquo;s session, these permissions are removed.</span></p>
+
+<p><span style="color: rgb(0, 0, 0);text-align: start;"><span style="color: rgb(0, 0, 0);text-align: start;">With this workflow, users can access Windows targets on a just-in-time basis, with time-bound sessions. Security teams can meanwhile maintain the existing user profiles of an account, including key credential management and rotation policies</span>&nbsp;</span></p>
+
+<ol>
+	<li>Under the <strong>Access&nbsp;</strong>space, hover over the <strong>acme.corp</strong> account and click the <strong>Add Windows target&nbsp;</strong>button again.
+		<br class="Apple-interchange-newline"><img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYxNywicHVyIjoiYmxvYl9pZCJ9fQ==--fb18075465108fb5b8d547fb57445d12b1071ccd/DirectUploadedFile" class="fr-fic fr-dib" style="vertical-align: top;color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);width: 833px;"></li>
+	<li>Fill in the <strong>Target address</strong><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">: &nbsp;</span>
+		<x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);"><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:PPA_Address}</span></span></x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">&nbsp;</span></li>
+	<li>Verify the <strong>Connect using just-in-time</strong><strong>&nbsp;elevation</strong> box is checked and click on <strong>Add and connect</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ5MywicHVyIjoiYmxvYl9pZCJ9fQ==--ba5003c6b9a7b694c9e47552bd21d17cafd16de3/DirectUploadedFile" style="width: 452px;" class="fr-fic fr-dib"></li>
+	<li>Open the RDP file to launch the session and once connected, double-click on the <strong>Local Users and Groups&nbsp;</strong>icon, then navigate to <strong>Groups&nbsp;</strong>and<strong>&nbsp;Remote Desktop Users</strong> and Verify you can see the member <strong>ACME\<span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:PPA_Username}</span> &nbsp;</strong>in the list.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjQ5NCwicHVyIjoiYmxvYl9pZCJ9fQ==--29de2224d5c7b65045e171f309bd7edde328566f/DirectUploadedFile" style="width: 546px;" class="fr-fic fr-dib">
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>In this scenario, the Vaulted credentials used to access the target system do not have standing privileges. Instead, the target account is added to the local group only when needed, providing us with the needed permissions just in time. The target account will be removed from the local group when we disconnect.</p>
+		</x-block>
+	</li>
+	<li>Close the windows and sign out of the RDP session.
+		<br><img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc2NJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6a0ab2aa784d190fcc637030dc36a4f6de0b89ff/DirectUploadedFile" class="fr-fic fr-dib" style="vertical-align: top;color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);width: 540px;"></li>
+</ol>
+<hr data-page-break="">
+
+<h1><strong><span style="color: rgb(41, 105, 176);">Section 4: Request Temporary Access to a Cloud Console</span></strong></h1>
+
+<p>In this section, you will request for access to an AWS account within the AWS organization that you do not have access to.&nbsp;</p>
+
+<p>There may be instances where your current permissions are insufficient to accomplish a specific task. If you need to access a cloud console that doesn&#39;t appear in your <span class="mc-variable project_variables.secure-access-space variable">Access space</span> or if you need additional permissions to perform a task in a cloud console that does appear in your <span class="mc-variable project_variables.secure-access-space variable">Access space</span>, you can make a one-time request for temporary access.</p>
+<hr data-page-break="">
+
+<h2>4-1 Request temporary access to an AWS account</h2>
+
+<p>In this section, you will request access to the AWS account <strong>opa-account-xxxx-3</strong> that you currently do not have access to.</p>
+
+<ol>
+	<li>Navigate to the <strong>Apps and Secured Items<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYxOCwicHVyIjoiYmxvYl9pZCJ9fQ==--704dd05ca9c67b2773d6efe09576507cf6869ec0/DirectUploadedFile" style="width: 716px;" class="fr-fic fr-dib"></strong></li>
+	<li><span style="color:black;">Click on the <strong>AWS IAM Identity Center&nbsp;</strong>tile. <br class="Apple-interchange-newline"><img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU4OCwicHVyIjoiYmxvYl9pZCJ9fQ==--aee08276e1f4199c522cddc279b001719a2b87d1/DirectUploadedFile" class="fr-fic fr-dib" style="vertical-align: top;color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);width: 541px;"><br class="Apple-interchange-newline"></span></li>
+	<li><span style="color:black;">Click <strong>Continue</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Njc0NSwicHVyIjoiYmxvYl9pZCJ9fQ==--32b2af056b3acd0658fb8f32c2fb97ec0dde1723/DirectUploadedFile" style="width: 429px;" class="fr-fic fr-dib"></span>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p><strong>Note:</strong> If an <strong>Error 401&nbsp;</strong>message appears it might be because the session has expired, close and reopen Chrome, sign in again, and retry opening the <strong>AWS IAM Identity Center</strong> tile.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjkzNywicHVyIjoiYmxvYl9pZCJ9fQ==--b215c4968f885712c6865a65c4bad85d2033549b/DirectUploadedFile" style="width: 518px;" class="fr-fic fr-dib"></p>
+		</x-block>
+	</li>
+	<li>Click on <strong>Request access<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzkyMiwicHVyIjoiYmxvYl9pZCJ9fQ==--f68c475d311a14ce6920bbcb4376da17277dfcb8/DirectUploadedFile" style="width: 953px;" class="fr-fic fr-dib"></strong></li>
+	<li>Specify a <strong>reason</strong> of your preference for your request, let the <strong>priority</strong> to Medium, enter <strong><x-copy-text><strong>opa-account-5Vi2PKn2YO-3</strong></x-copy-text>&nbsp;</strong> under the account name and select the account. Type
+		<x-copy-text><strong>ReadOnlyAccess</strong></x-copy-text> for the requested permission set and select the permission set.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc0MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8f496377dc825ce712edf3b1b0218ec074b8d6ac/DirectUploadedFile" style="width: 491px;" class="fr-fic fr-dib"></li>
+	<li>The time zone is set according to the time zone of your workstation. Specify the <strong>Date</strong> as the current date along with the start and end times to ensure a session length of at least 2 hours. Set the time according to your Lab Virtual Machine. When ready click on <strong>Send request<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc0MiwicHVyIjoiYmxvYl9pZCJ9fQ==--99fceb81bb604b719950e9537431da2d62ec8ef8/DirectUploadedFile" style="width: 944px;" class="fr-fic fr-dib"></strong></li>
+	<li>Your request will be sent for approval. A screenshot from the approver&#39;s point of view is also included below <strong>for</strong> <strong>reference</strong>. In our case, a script runs every 30 seconds to check for new requests and automatically approves any that are pending.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYxOSwicHVyIjoiYmxvYl9pZCJ9fQ==--d8e4f11f3a826016273fb5d91ebf23daca1c9623/DirectUploadedFile" style="width: 558px;" class="fr-fic fr-dib"><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc0NSwicHVyIjoiYmxvYl9pZCJ9fQ==--23cbe1ef6a88a78a5cf088f2c12364de26f9f454/DirectUploadedFile" style="width: 1168px;" class="fr-fic fr-dib">
+		<br>
+	</li>
+	<li>To check the status of your request, navigate to the <strong>Access</strong> space and navigate to <strong>Access Requests</strong>, then select <strong>My Requests - Cloud</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc0NCwicHVyIjoiYmxvYl9pZCJ9fQ==--99f600f7e28b75180d552c7a552d4e412764c089/DirectUploadedFile" style="width: 953px;" class="fr-fic fr-dib"></li>
+	<li>Once approved, the status will change from <em><strong>Pending Approval</strong></em><strong>&nbsp;</strong>to <em><strong>Pending Fulfillment</strong></em> and finally to <strong><em>Fulfilled</em></strong>. You can click the refresh button to view the current status.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc0NiwicHVyIjoiYmxvYl9pZCJ9fQ==--e55d7cca5ef0bc441c0598f3903f03465f498686/DirectUploadedFile" style="width: 762px;" class="fr-fic fr-dib"><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc0NywicHVyIjoiYmxvYl9pZCJ9fQ==--1049b7c5abef9434f9211162de8c3b008b131a74/DirectUploadedFile" style="width: 762px;" class="fr-fic fr-dib"></li>
+	<li>Once the status changes to <strong>Fulfilled,&nbsp;</strong>navigate to the <strong>Apps and Secured Items<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYyMCwicHVyIjoiYmxvYl9pZCJ9fQ==--61d4884d2660bb3ac4a5b368fe54f206704a7074/DirectUploadedFile" style="width: 380px;" class="fr-fic fr-dib"></strong></li>
+	<li><span style="color:black;">Click on the <strong>AWS IAM Identity Center&nbsp;</strong>tile.&nbsp;<img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODU4OCwicHVyIjoiYmxvYl9pZCJ9fQ==--aee08276e1f4199c522cddc279b001719a2b87d1/DirectUploadedFile" class="fr-fic fr-dib" style="vertical-align: top;text-align: left;color: rgb(65, 65, 65);background-color: rgb(255, 255, 255);width: 541px;"></span></li>
+	<li>Click <strong>Continue</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Njc0NSwicHVyIjoiYmxvYl9pZCJ9fQ==--32b2af056b3acd0658fb8f32c2fb97ec0dde1723/DirectUploadedFile" style="width: 429px;" class="fr-fic fr-dib"></li>
+	<li>Notice that the account <strong>opa-account-5Vi2PKn2YO-3</strong> now appears in the Accounts list with the requested permission set. The access window is marked as limited, and the permissions will be automatically de-provisioned at the specified expiration date and time. There is <strong>no</strong> need to connect to the account.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzkyMywicHVyIjoiYmxvYl9pZCJ9fQ==--426c5fa1c3c95538b0c40756298291195098d073/DirectUploadedFile" style="width: 1050px;" class="fr-fic fr-dib"></li>
+</ol>
+
+<p>For additional details on requesting on-demand access to cloud services, please refer to the documentation <a href="https://docs.cyberark.com/secure-access-space/latest/en/content/cloud-consoles/request-temporary-cloud-access.htm?tocpath=Access%20cloud%20consoles%7C_____4" rel="noopener noreferrer" target="_blank">here</a>. For information on managing in-platform access requests, check <a href="https://docs.cyberark.com/secure-access-space/latest/en/content/cloud-consoles/ar-in-app-requests.htm?tocpath=Manage%20on-demand%20in-platform%20access%20requests%7C_____0" rel="noopener noreferrer" target="_blank">here</a>.</p>
+<hr data-page-break="">
+
+<h1><strong><span style="color: rgb(41, 105, 176);">Section 5: <span class="mc-variable cc_product_vars.ITDR-full variable">Threat Detection and Response</span>&nbsp;</span></strong></h1>
+
+<p>In this section, we will review the <strong>S</strong><strong>uspicious Activities in Sessions&nbsp;</strong>IT alert supported by Threat Detection and Response.</p>
+
+<p>Threat Detection and Response enables organizations to automatically identify and address privileged security events. Continuous monitoring of identity systems helps detect suspicious activities and potential threats by analyzing logs, user behaviors, and system interactions for anomalies. Immediate actions, such as notifying security teams, isolating compromised accounts, and activating incident response protocols, are essential for containing and mitigating threats.</p>
+
+<p>For additional details on IT alerts, please refer to the documentation <a href="https://docs.cyberark.com/identity-protection-space/latest/en/content/itdr/alerts/privilege-alerts/configure-privilege-alerts.htm" rel="noopener noreferrer" target="_blank">here</a></p>
+
+<h2>5-1 Suspicious Activities in Sessions</h2>
+
+<p>Suspicious activities in sessions rules enable you to detect suspicious commands during live and recorded sessions in your environment. In this section, the command in question is the <strong>passwd</strong> command, which was intentionally entered earlier in section 1.5 to be identified in this section.<img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzcxOCwicHVyIjoiYmxvYl9pZCJ9fQ==--289b2f15d910149af73d331bb79952884eac4171/DirectUploadedFile" style="width: 865px;" class="fr-fic fr-dib"></p>
+
+<ol>
+	<li>Return to the <strong>Access&nbsp;</strong>space<strong>,&nbsp;</strong>click on the <strong>Waffle</strong> icon and navigate to the <strong>Detect and Respond</strong> space.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYyMiwicHVyIjoiYmxvYl9pZCJ9fQ==--9e81480dd78b1489a92e00aaeea69489c889a60d/DirectUploadedFile" style="width: 718px;" class="fr-fic fr-dib"></li>
+	<li>Under <strong>Threat detection &amp; response</strong> and <strong>Configurations&nbsp;</strong>select<strong>&nbsp;Detections and responses.&nbsp;</strong>Then click on<strong>&nbsp;</strong><strong>Suspicious activities in session</strong><strong>&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYyNSwicHVyIjoiYmxvYl9pZCJ9fQ==--718e1f317be82e4da4ebae7079980742c3c506e3/DirectUploadedFile" style="width: 464px;" class="fr-fic fr-dib"></strong></li>
+	<li>Search for the
+		<x-copy-text><strong>^passwd.*$</strong></x-copy-text> pattern. You&#39;ll notice that a specific pattern has been configured already for you to match any line that starts with the string <em>passwd</em> followed by any characters (or none) until the end of the line.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYyNiwicHVyIjoiYmxvYl9pZCJ9fQ==--e9a3b54219fcd0d31449f4114d6cdcb315c90653/DirectUploadedFile" style="width: 624px;" class="fr-fic fr-dib"></li>
+	<li>Navigate to the <strong>Security alerts feed</strong> and look for your user
+		<x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:CPC_Username}</span></x-copy-text>. You should observe at least one <strong>S</strong><strong>uspicious activities in a privileged session</strong> alert marked with critical severity.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYyOCwicHVyIjoiYmxvYl9pZCJ9fQ==--d48aed185a2dac156dc6469f0172f0443aa2aff7/DirectUploadedFile" style="width: 747px;" class="fr-fic fr-dib"></li>
+	<li>On the right side, expand the <strong>Risky Commands</strong> section by clicking the downward-facing arrow. You will see that the risky command typed was <em>passwd</em>, along with the matched command regex.In this case, an automatic response was not configured, such as locking the user in Identity or implementing a custom response using Identity flows.<img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc1MywicHVyIjoiYmxvYl9pZCJ9fQ==--ba4548b6b5eaf178c106d9ce69141e53971a49ff/DirectUploadedFile" style="width: 824px;" class="fr-fic fr-dib"></li>
+	<li>Notice in the bottom and automatic termination was set for this rule.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc1NCwicHVyIjoiYmxvYl9pZCJ9fQ==--8f58fd461380265f4eb0b18fecb126f7baad93ba/DirectUploadedFile" style="width: 943px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>For lab purposes, you were assigned the <strong>TDR Read-Only</strong> role. A user assigned a full permissions TDR role would have the ability to mark or resolve the alerts.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjkyNywicHVyIjoiYmxvYl9pZCJ9fQ==--ea2989848eee5bf16ee052b327abe521f3189ae4/DirectUploadedFile" style="width: 564px;" class="fr-fic fr-dib"><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NjkyOCwicHVyIjoiYmxvYl9pZCJ9fQ==--532884ee7f316a26ca24fa766bc08d89e4515c01/DirectUploadedFile" style="width: 338px;" class="fr-fic fr-dib"></p>
+		</x-block>
+	</li>
+</ol>
+<hr data-page-break="">
+
+<h1><strong><span style="color: rgb(41, 105, 176);">Section 6: Secure AI Agents</span></strong></h1>
+
+<p>In this section, we will provide a high-level overview of the secure AI agents capability, and you will set up an AI assistant to execute database tasks via our AI Gateway using natural language.</p>
+
+<p><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQyNCwicHVyIjoiYmxvYl9pZCJ9fQ==--80ae5a063c1af73326ac5159917f2878933d8412/DirectUploadedFile" style="width: 1141px;" class="fr-fic fr-dib"></p>
+
+<p>We can secure agents by registering them in the inventory of authorized agents, creating an identity for the AI agent, and directing access to tools and databases through the Secure Infrastructure Access MCP server via the AI Agents Gateway. Our policies ensure least privilege and zero standing privileges, granting access solely for specific tasks and revoking it afterward. Audits capture who initiated the agent (human user), which AI agent identity acted, which tools ran, and which resource (database) was touched.</p>
+
+<p>Various AI-powered tools can be utilized, provided they support connections to remote MCP servers via OAuth 2.1. Notable examples include Claude, Copilot, and others. For this exercise, we will use Le Chat, an AI assistant developed by Mistral AI, a company based in France.</p>
+<hr data-page-break="">
+
+<h2>6-1 Configuring a Custom Connector</h2>
+
+<p>When you connect to a remote MCP server, the AI assistant, Le Chat/Vibe from Mistral, will redirect you to your IDP for authentication, specifically CyberArk in this instance. We&#39;ll begin by signing out so you can see the authentication process and the subsequent redirection back to the AI chatbot. This approach allows us to record details such as who initiated the agent (the human user), which AI agent&#39;s identity was utilized, and the tools that were executed etc.</p>
+
+<ol>
+	<li>Click on your username in the top right corner of the window and select <strong>Sign out</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQyNSwicHVyIjoiYmxvYl9pZCJ9fQ==--a2e573811599d251ccf4032ef2d403b2f4599cc6/DirectUploadedFile" style="width: 427px;" class="fr-fic fr-dib"></li>
+	<li>Open a new tab in your browser. If you have any other tabs open, such as AWS, feel free to close them.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQyNiwicHVyIjoiYmxvYl9pZCJ9fQ==--9cf23ab0b907ff3c76d2601721d56e48e903a6a0/DirectUploadedFile" style="width: 513px;" class="fr-fic fr-dib"></li>
+	<li>Navigate to
+		<x-copy-text><strong>https://chat.mistral.ai/chat</strong></x-copy-text> and click on <strong>Sign up</strong>.&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQyNywicHVyIjoiYmxvYl9pZCJ9fQ==--788c7297708cc7957a72b0622db01aab7ac98bfb/DirectUploadedFile" style="width: 771px;" class="fr-fic fr-dib"></li>
+	<li>You will need to sign up for a free account. You can use Apple, Google, Hotmail, or any other personal email to complete the registration process.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQyOCwicHVyIjoiYmxvYl9pZCJ9fQ==--19f1a4732803518d62ade81d13cda4bbb4da3109/DirectUploadedFile" style="width: 528px;" class="fr-fic fr-dib"></li>
+	<li>Once you signed up for a free account and you&#39;re logged in, navigate to the <strong>Connectors</strong> page under the <strong>Context</strong> section.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYyOSwicHVyIjoiYmxvYl9pZCJ9fQ==--8ad8578d3347868a5d5c8ef226db5fb44d011ccd/DirectUploadedFile" style="width: 300px;" class="fr-fic fr-dib"></li>
+	<li>Click on <strong>Add Connector<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYzMCwicHVyIjoiYmxvYl9pZCJ9fQ==--bba64ffee0f52350c844260e88f2a4ad5a21c6d5/DirectUploadedFile" style="width: 774px;" class="fr-fic fr-dib"></strong></li>
+	<li>Select the <strong>Custom MCP Connector</strong>, enter the name
+		<x-copy-text><strong>MCPSIADB</strong></x-copy-text> and set the Connector Server address to
+		<x-copy-text><strong>https://acme-lab-1774.data.aigw.cyberark.cloud/mcp/siadbmcpserver</strong></x-copy-text>. Click somewhere outside the address element like next to the connector name and allow a few seconds for Mistral to connect to the gateway, it will automatically detect and configure the authentication type to <strong>OAuth 2.1</strong>. Optionally you can also provide human readable description of what this connector does.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQzMiwicHVyIjoiYmxvYl9pZCJ9fQ==--b5b927372d859b9bd4ab0ec95d9766af53086250/DirectUploadedFile" style="width: 395px;" class="fr-fic fr-dib"></li>
+	<li>Scroll down to the <strong>OAuth2 Advanced Settings</strong><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQzMywicHVyIjoiYmxvYl9pZCJ9fQ==--b1f464fe66297533aa21c1dacb7cc693a50b2ce6/DirectUploadedFile" style="width: 427px;" class="fr-fic fr-dib"></li>
+	<li>Enter <strong><x-copy-text><strong>dede33bc-41f4-4510-bce9-a05572dee681</strong></x-copy-text>&nbsp;</strong> as the client ID and
+		<x-copy-text><strong>tNdJDL9pbyPtOEzqt1HHaVnGSBx3Gq3U</strong></x-copy-text> as the client secret. Once completed, click on <strong>Connect</strong>.&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQzNCwicHVyIjoiYmxvYl9pZCJ9fQ==--6adb5b2b4e6c269065e2b418f7f4f831f0cd31d8/DirectUploadedFile" style="width: 391px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>Please note that we&#39;ve opted to register a single AI agent in the administration space for all connections to simplify the configuration process. In a production environment, a Security Admin would define a unique AI agent for each individual agent.</p>
+		</x-block>
+	</li>
+	<li>Click on the <strong>Connect</strong> button on your custom connector.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYzMSwicHVyIjoiYmxvYl9pZCJ9fQ==--e8ad5cd2878e360f23b20904f49b3d33382d6f7b/DirectUploadedFile" style="width: 300px;" class="fr-fic fr-dib"></li>
+	<li>Le Chat/Vibe will redirect you to CyberArk for authentication, as this is the IDP. Enter your username
+		<x-copy-text><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">%{metadata:CPC_Username}</span></x-copy-text> and password <strong>Cyberark2</strong> to complete the login process <em>(<strong>Note that if you were not asked to reset your password at the start of the lab, use the default one Cyberark1)</strong></em>. Once you enter your password you will get redirected back to Le Chat<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQzNywicHVyIjoiYmxvYl9pZCJ9fQ==--087145dedefa853c7e3703e2846c1b468e73e034/DirectUploadedFile" style="width: 494px;" class="fr-fic fr-dib"></li>
+	<li>Once connected, verify that the connector is displayed as <strong>C</strong><strong>onnected</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYzMiwicHVyIjoiYmxvYl9pZCJ9fQ==--8f2b6b880570fe7448b06ecf7c7ed73d9fceff13/DirectUploadedFile" style="width: 460px;" class="fr-fic fr-dib"></li>
+</ol>
+<hr data-page-break="">
+
+<h2>6-2 Testing the custom connector</h2>
+
+<ol>
+	<li>Click on <strong>New Chat</strong><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQzOSwicHVyIjoiYmxvYl9pZCJ9fQ==--50263a481f766fa403463ffa01165a33a0e80dcb/DirectUploadedFile" style="width: 582px;" class="fr-fic fr-dib"></li>
+	<li>Verify under the <strong>Connectors</strong> that the <strong>MCPSIADB</strong> connector has its checkbox enabled.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYzMywicHVyIjoiYmxvYl9pZCJ9fQ==--70d579827a7f55f35fd84e0c23aa0336c8116279/DirectUploadedFile" style="width: 613px;" class="fr-fic fr-dib"></li>
+	<li>Ask Le Chat to
+		<x-copy-text><strong>List the available databases I can access</strong></x-copy-text> and when prompted click on <strong>Allow this time</strong>&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc1OSwicHVyIjoiYmxvYl9pZCJ9fQ==--7e2b38064f8a3c0b25993f7654bcf270bf88f6f3/DirectUploadedFile" style="width: 803px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p><strong>Note</strong>: If you receive a similar prompt, click on the <strong>Regenerate</strong> button.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQ0MywicHVyIjoiYmxvYl9pZCJ9fQ==--99b8e32b3430a2277e9d30ac020863c117c2744c/DirectUploadedFile" style="width: 678px;" class="fr-fic fr-dib"></p>
+		</x-block>
+	</li>
+	<li>Thanks to MCP and the AI Gateway, you will notice that a database will be listed based on your permissions. It will either be Postgres Database 1-1 or Postgres Database 1-2. The prompt should look something similar to below:<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQ1MCwicHVyIjoiYmxvYl9pZCJ9fQ==--483564d52065b4ba52e25d3127d019d2afdecc79/DirectUploadedFile" style="width: 723px;" class="fr-fic fr-dib"></li>
+	<li>Ask Le Chat to
+		<x-copy-text><strong>List a summary of all tables in the database</strong></x-copy-text> If you click on the query you&#39;ll also see the SQL query applied to the target database. Click on <strong>Allow this time</strong><strong><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc1NywicHVyIjoiYmxvYl9pZCJ9fQ==--8337061b6ab4c3d5feb10685d1155906957f5323/DirectUploadedFile" style="width: 853px;" class="fr-fic fr-dib"></strong>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p><strong>Note:</strong> Clicking on <strong>Always Allow</strong> will approve the action for this time and automatically permit all future requests to use this specific function. Conversely, clicking on <strong>Allow this time</strong> will approve the action for this instance only.</p>
+		</x-block>
+	</li>
+	<li>Notice the tables on the database. The AI assistant uses a natural language request to query the Secure Infrastructure Access-protected database. This request is converted into an SQL query and sent to the Secure Infrastructure Access MCP server, which queries the database using a native client. The database&#39;s response is converted to MCP format and returned to the AI agent, which then translates it back into natural language.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQ1MiwicHVyIjoiYmxvYl9pZCJ9fQ==--431b98321fc05d0ae124976b6e8ce043dba0a0b5/DirectUploadedFile" style="width: 686px;" class="fr-fic fr-dib"></li>
+	<li>Ask Le Chat to
+		<x-copy-text><strong>Display the entire inventory list and highlight any items that have a stock quantity of less than 20</strong></x-copy-text>. &nbsp;Click on <strong>Allow this time<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc1OCwicHVyIjoiYmxvYl9pZCJ9fQ==--cde2855250617ce25b9bb177ee4a8dead923a8b9/DirectUploadedFile" style="width: 662px;" class="fr-fic fr-dib"></strong></li>
+	<li>Notice the output.<img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQ1NCwicHVyIjoiYmxvYl9pZCJ9fQ==--b12d46e1af518c9d5ec8b899171f09fe3aff05de/DirectUploadedFile" style="width: 623px;" class="fr-fic fr-dib"></li>
+	<li>Ask Le Chat to
+		<x-copy-text><strong>delete the inventory table</strong></x-copy-text> If you receive a confirmation message, confirm for deletion. <strong>Note that regardless of whether the agent requested your confirmation or not, it still couldn&#39;t delete the inventory table or modify any of its elements because the temporary identity the agent is using on behalf of the user lacks the necessary permissions for this action.&nbsp;</strong>Therefore, a rogue ai agent would not be able to drop the database.</li>
+	<li><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQ2MCwicHVyIjoiYmxvYl9pZCJ9fQ==--146dcc97ef09f6e5ba6545b86c0fbebdf1c580de/DirectUploadedFile" style="width: 601px;" class="fr-fic fr-dib">Remember that the above prompts can also be performed in any native language supported by the LLM. Here&rsquo;s an example in Greek asking to list the contents of the Inventory table.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQ2MSwicHVyIjoiYmxvYl9pZCJ9fQ==--e5ef0fb272301052696188de273ec12ef085d4cd/DirectUploadedFile" style="width: 547px;" class="fr-fic fr-dib"></li>
+</ol>
+<hr data-page-break="">
+
+<h1><strong><span style="color: rgb(41, 105, 176);">Section 7: Review Session Recordings and Command Audit</span></strong></h1>
+
+<p>In this section, we will review the recordings and command audits for the sessions we performed in the previous exercises.</p>
+
+<p>To perform the following exercises, we assigned all users the permissions to access the <strong>Audit space</strong> via the role<strong>&nbsp;global auditors</strong>.</p>
+<hr data-page-break="">
+
+<h2>7-1 Accessing the Audit space</h2>
+
+<ol>
+	<li>Login to the Identity Portal if not already connected.</li>
+	<li>Click the <strong>Waffle</strong> button and select <strong>Audit and Reports</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYzNSwicHVyIjoiYmxvYl9pZCJ9fQ==--c6305add2b165fcfa2a1842ca58c154670660367/DirectUploadedFile" style="width: 544px;" class="fr-fic fr-dib"></li>
+	<li>Navigate to the <strong>Session Monitoring&nbsp;</strong>section.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYzNiwicHVyIjoiYmxvYl9pZCJ9fQ==--aa6bca40440aa983af18fb15a4f257f8e340f763/DirectUploadedFile" style="width: 703px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>Note we can see the session recordings for all users of this lab here.</p>
+		</x-block>
+	</li>
+	<li>In the filter section, type in your username (no need to include the suffix) and press enter:
+		<x-copy-text>%{metadata:User}</x-copy-text><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYzOCwicHVyIjoiYmxvYl9pZCJ9fQ==--4add0ada861d090951d6f184d89e85ae4bfba242/DirectUploadedFile" style="width: 627px;" class="fr-fic fr-dib"></li>
+	<li>Expand the <strong>Filter&nbsp;</strong>section and ensure only <strong>SIA&nbsp;</strong>is selected as a<strong>&nbsp;Service</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODYzOSwicHVyIjoiYmxvYl9pZCJ9fQ==--bb93e4760cc42e32d68c920a9b55093e8ba9319c/DirectUploadedFile" style="width: 589px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>If you are using a small screen, close the filter section to make it easier to read.</p>
+		</x-block>
+	</li>
+</ol>
+<hr data-page-break="">
+
+<h2>7-2 Monitoring Windows sessions</h2>
+
+<ol>
+	<li><span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">In the list, select one of the sessions made to the Windows VM.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzU3NCwicHVyIjoiYmxvYl9pZCJ9fQ==--be9f1f91af486ed817706e47831d14810094095f/DirectUploadedFile" style="width: 793px;" class="fr-fic fr-dib"></span></li>
+	<li>In the <strong>Session details&nbsp;</strong>tab, we can see the Target ID and the connection method (Vaulted or JIT).<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc0FJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1f51dcf7fb30ba592459c3340e34ef968a2275ae/DirectUploadedFile" style="width: 540px;" class="fr-fic fr-dib"></li>
+	<li>Click on the <strong>Play Recording</strong> button, then review the video recording.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODY0MCwicHVyIjoiYmxvYl9pZCJ9fQ==--5829a111604fc74aab3de53f46b574434a23953c/DirectUploadedFile" style="width: 931px;" class="fr-fic fr-dib">
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p><strong>Note:</strong><strong>&nbsp;</strong>If the<strong>&nbsp;</strong><strong>Play&nbsp;</strong><strong>Recording&nbsp;</strong>button isn&#39;t yet visible for your RDP sessions, you can access a recording from a prior session. Set the <em>Time range</em> to <strong>30 days</strong>, enter the <em>Session ID</em>
+				<x-copy-text><strong>6ca37a57-81c8-468b-b3cf-fdad591ada88</strong></x-copy-text>, press <strong>Enter&nbsp;</strong>and then <strong>click&nbsp;</strong>on the session to watch the recording.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NTczMywicHVyIjoiYmxvYl9pZCJ9fQ==--5c2ab7f9405efbc6d75fabe8481bd349b3ed0eee/DirectUploadedFile" style="width: 971px;" class="fr-fic fr-dib"></p>
+		</x-block>
+	</li>
+	<li>Close the window to return to the list.</li>
+</ol>
+<hr data-page-break="">
+
+<h2>7-3 Monitoring Linux sessions</h2>
+
+<ol>
+	<li>In the list, select the session to the Linux VM. Notice the risk score assigned due to the configured risky commands rule.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODY0MSwicHVyIjoiYmxvYl9pZCJ9fQ==--a19bbac2cd51e06d913025262f7c395d67b14033/DirectUploadedFile" style="width: 818px;" class="fr-fic fr-dib"></li>
+	<li>In the <strong>Session details&nbsp;</strong>tab, we can see the Target ID and the connection method.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb01JIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b540c0effdb23ceb814e6885f0c09dc26d7f4fd7/DirectUploadedFile" style="width: 540px;" class="fr-fic fr-dib"></li>
+	<li>Click on <strong>Commands&nbsp;</strong>to see the list of actions from the session and notice the command that generated the high risk score<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc2OCwicHVyIjoiYmxvYl9pZCJ9fQ==--660a15bf53f68df98e2f79c9969ea79e537a37ab/DirectUploadedFile" style="width: 535px;" class="fr-fic fr-dib"></li>
+	<li>Next, click on <strong>AI Summary,&nbsp;</strong>then <strong>Generate AI summary&nbsp;</strong>to see an analysis of the session by <strong>CORA AI</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb1VJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b8861a8887984730716fb06fc74da490c12ab642/DirectUploadedFile" style="width: 540px;" class="fr-fic fr-dib"></li>
+	<li>After a few moments, a summary of the session activities will appear.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc2OSwicHVyIjoiYmxvYl9pZCJ9fQ==--0e55ba064de07917ec2500269c7089678e5365ab/DirectUploadedFile" style="width: 522px;" class="fr-fic fr-dib"></li>
+	<li>Click on <strong>Play recording</strong>.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzU3NiwicHVyIjoiYmxvYl9pZCJ9fQ==--8be0791fb772e53f3e0146aac3df5395723d887a/DirectUploadedFile" style="width: 618px;" class="fr-fic fr-dib"></li>
+	<li>Note that we can navigate the recording via the time bar at the bottom or search for a specific event on the left side.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6Nzc3MCwicHVyIjoiYmxvYl9pZCJ9fQ==--5f3c3306803041d1bb6b7a1288b079d60e6899ff/DirectUploadedFile" style="width: 1078px;" class="fr-fic fr-dib"></li>
+	<li>Close this view to return to the <strong>Audit&nbsp;</strong>space.</li>
+</ol>
+<hr data-page-break="">
+
+<h2>7-4 Monitoring Database sessions</h2>
+
+<ol>
+	<li>Under the <strong>Session monitoring</strong> look for the first database session you connected to in the previous section.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6ODY0MiwicHVyIjoiYmxvYl9pZCJ9fQ==--a8d4eb2240e458da08d6f31e5ea7ae3a9a0c9eb9/DirectUploadedFile" style="width: 894px;" class="fr-fic fr-dib"></li>
+	<li>All the critical pieces of information are visible in <strong>Session details</strong><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb2tJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b88878bf1d0a3dd557d467b93d554a5d13ac5f46/DirectUploadedFile" style="width: 540px;" class="fr-fic fr-dib"></li>
+	<li>Click on <strong>Commands</strong> to see the commands run during the session.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb29JIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9956742c9414f7767917bc383e386e6e5e44388e/DirectUploadedFile" style="width: 540px;" class="fr-fic fr-dib"></li>
+	<li>Close the window to return to the <strong>Audit&nbsp;</strong>space.</li>
+</ol>
+<hr data-page-break="">
+
+<h2>7-5 Monitoring AI Agent Activity</h2>
+
+<ol>
+	<li>Under <strong>Session Monitoring</strong>, look for the latest listed database session, which should appear at the top. Click on it.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQ1NSwicHVyIjoiYmxvYl9pZCJ9fQ==--121b3191252dfbcdeae38f5109ee23bbab7999c7/DirectUploadedFile" style="width: 1038px;" class="fr-fic fr-dib">
+		<br>
+	</li>
+	<li>Notice the agent_name for that session, the connection string used and the authentication method.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQ1NiwicHVyIjoiYmxvYl9pZCJ9fQ==--bd53be37a15ebb92c3feabe8da3edc97343a4937/DirectUploadedFile" style="width: 624px;" class="fr-fic fr-dib"></li>
+	<li>Click on <strong>Commands</strong><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQ1NywicHVyIjoiYmxvYl9pZCJ9fQ==--342f0ec8e88f06eb63cd0799156f8a269fb8ea54/DirectUploadedFile" style="width: 598px;" class="fr-fic fr-dib"></li>
+	<li>Notice the SQL queries that Le Chat executed through the MCP Connector on behalf of the Identity user.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsiZGF0YSI6NzQ1OCwicHVyIjoiYmxvYl9pZCJ9fQ==--2f540cb42ca41bc3eaf6917b1baaf968abe64057/DirectUploadedFile" style="width: 684px;" class="fr-fic fr-dib"></li>
+</ol>
+<hr data-page-break="">
+
+<p><strong><span style="color: rgb(41, 105, 176);">This concludes the training lab. Thank you for your participation!</span></strong></p>
+
+<p><span style="color: rgb(41, 105, 176);"><strong>The next section includes an optional exercise.</strong></span></p>
+<hr data-page-break="">
+
+<h1><strong><span style="color: rgb(41, 105, 176);">Section 8: Optional Exercise</span></strong></h1>
+
+<h2>8-1 Create and run alias commands</h2>
+
+<p>Rather than copying the full SIA connection command from the <strong>Access</strong> space, we can simplify the process of creating reusable connection aliases for secure system access using CyberArk&#39;s <a href="https://docs.cyberark.com/secure-access-space/latest/en/content/infrastructure/sas-linux-aliascommands.htm" rel="noopener noreferrer" target="_blank">scripts</a>, without the need to connect to the web UI. The script will save the alias commands in your default shell environment. For this exercise, the Windows script has already been saved on your machine. Once you run the script for the first time, the following alias commands are ready to use :</p>
+
+<ul>
+	<li><strong>cybr-ssh</strong>&nbsp; Runs the SSH command for users who prefer not to use MFA caching or are unable to use it.</li>
+	<li><strong>cybr-sso&nbsp;</strong> Runs the SSH command using an MFA caching key.</li>
+</ul>
+
+<ol>
+	<li>Click the <strong>PowerShell&nbsp;</strong>shortcut on your taskbar.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcTRKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2f3b98b64754d74f8d3b3ea4b4a38296ae90dcfa/DirectUploadedFile" style="width: 300px;" class="fr-fic fr-dib"></li>
+	<li>Execute the script
+		<x-copy-text>.\cyberarkscript.ps1</x-copy-text>&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBckFKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--55b44e2bdc2312161114d08653f4b66f5a3bc1ff/DirectUploadedFile" style="width: 774px;" class="fr-fic fr-dib"></li>
+	<li>Enter
+		<x-copy-text>acme-lab-1774</x-copy-text> as your CyberArk tenant name&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBckVKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a6643842ccf9962556a06dbc57cdf59bc1640474/DirectUploadedFile" style="width: 577px;" class="fr-fic fr-dib"></li>
+	<li>Provide your user ID
+		<x-copy-text>%{metadata:CPC_Username}</x-copy-text> when prompted for your full username.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBck1KIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--857d07c5d4c654ea549689a78ada35783ef20623/DirectUploadedFile" style="width: 758px;" class="fr-fic fr-dib"></li>
+	<li>Hit the <strong>Enter&nbsp;</strong>key when prompted for the path where the key will be saved.&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcklKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5693a8b7d6893c159cbb4553eb3536cbbb9ed845/DirectUploadedFile" style="width: 796px;" class="fr-fic fr-dib"></li>
+	<li>You will receive a summary of the alias creation and be prompted to close and reopen the window. Press the <strong>Enter&nbsp;</strong>key and <strong>Close&nbsp;</strong>the PowerShell window.&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBclFKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--28866fe6ddc09041d5bc2e23c55113c38a037fcd/DirectUploadedFile" style="width: 756px;" class="fr-fic fr-dib"></li>
+	<li>Relaunch <strong>PowerShell&nbsp;</strong>from the taskbar.</li>
+	<li>Enter the <strong>command&nbsp;</strong>
+		<x-copy-text>cybr-sso &lt;instanceID&gt;</x-copy-text> replacing <em>instanceID&nbsp;</em>with the AWS Linux VM instance ID from the previous exercise.&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcmdKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a5edb7741d2045821993da616cb38f784ae92e02/DirectUploadedFile" style="width: 703px;" class="fr-fic fr-dib"></li>
+	<li>If prompted for the <span style="color: rgb(65, 65, 65);text-align: left;background-color: rgb(255, 255, 255);">RSA key fingerprint question</span> enter <strong>yes</strong> and press <strong>Enter</strong>.<strong>&nbsp;<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcmtKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d7ec1c8a239657fa22403947911d6232125a0a6/DirectUploadedFile" style="width: 765px;" class="fr-fic fr-dib"><br></strong></li>
+	<li>Enter <strong>Cyberark2</strong> as your <strong>Password</strong> and press <strong>Enter</strong>. <em>(Note that if you were not asked to reset your password at the start of the lab, use the default one Cyberark1)</em><img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcm9KIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ffaf849076443625c80f61069ff3f661db09dddd/DirectUploadedFile" style="width: 696px;" class="fr-fic fr-dib">
+		<br>
+		<x-block class="alert alert-warning" data-callout="" data-callout-info="">
+
+			<p>When executing the alias command utilizing MFA caching, the script checks for a valid MFA key. If it&#39;s not present, it prompts for authentication. Upon successful authentication, the script retrieves the MFA key and establishes a connection, setting up a secure session with the target. Subsequent sessions will use this key, negating the need for re-authentication within the MFA caching period.</p>
+		</x-block>
+	</li>
+	<li>Verify you were able to connect to the target Linux VM.<img data-fr-image-pasted="true" src="https://cyberark-software.skytap-portal.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcnNKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a5be5217600a11909f6ae965b48f5fb72441c93/DirectUploadedFile" style="width: 754px;" class="fr-fic fr-dib"></li>
+	<li>Type
+		<x-copy-text>exit</x-copy-text> to exit the SSH session.</li>
+	<li>Run the
+		<x-copy-text>cybr-sso &lt;instanceID&gt;</x-copy-text> command again. Verify you can connect without having to type your password again.<img src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaE1LIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3bfc6d52a35cd55b5fcd695272784c0a0fb00708/DirectUploadedFile" style="width: 755px;" class="fr-fic fr-dib"></li>
+</ol>
+
+<h2>
+	<br>
+</h2>
